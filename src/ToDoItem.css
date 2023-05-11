@@ -14,7 +14,7 @@ ul {
    box-shadow:0 5px 50px rgba(32,35,41,.25);
 }
 
-li {
+.ToDoItem {
     box-sizing: border-box;
     padding: 2%;
     display: flex;
@@ -24,11 +24,15 @@ li {
     border: solid var(--background);
     border-radius: 20px;
 }
-p{
+.ToDo-p {
     text-align: left;
     width: 70%;
     margin: 1%;
 }
+
+.ToDo-p--complete {
+    text-decoration: line-through;
+  }
 
 span {
     display: grid;
@@ -45,6 +49,11 @@ span {
     cursor: pointer;
     margin: 1%;
 }
+
+.done-active {
+    background: #4caf50;
+}
+
 .done:hover {
     border: solid var(--background);
 }
