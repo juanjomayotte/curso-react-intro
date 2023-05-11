@@ -1,0 +1,21 @@
+.createToDoButton {
+    margin: 10px;
+    box-sizing: border-box;
+    display: grid;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-family: 'Architects Daughter', cursive;
+    font-size: var(--lg);
+    background: var(--button);
+    color: var(--text);
+    border: 0;
+    outline: none;
+    align-items: center;
+    align-content: center;
+    cursor: pointer;
+    transform:rotate(0);transition:.3s ease
+}
+.createToDoButton:hover{transform:rotate(360deg)};
+
+

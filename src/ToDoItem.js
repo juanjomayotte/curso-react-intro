@@ -1,9 +1,11 @@
-function ToDoItem() {
+import './ToDoItem.css'
+
+function ToDoItem(props) {
     return(
       <li>
-        <span>V</span>
-        <p>Escuchar Música</p>
-        <span>X</span>
+        <p>{props.text}</p>
+        <span className='done'>V</span>
+        <span className='delete'>X</span>
       </li>  
       );
   }

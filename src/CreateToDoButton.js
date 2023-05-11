@@ -1,6 +1,8 @@
+import './CreateToDoButton.css'
+
 function CreateToDoButton() {
     return(
-        <button>crear NUEVO To-DO</button>
+        <button className='createToDoButton'>+</button>
         );
   }
-export {CreateToDoButton}  
+export {CreateToDoButton};  

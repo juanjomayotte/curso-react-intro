@@ -1,0 +1,18 @@
+input {
+    border: 0;
+    outline-color: var(--section);
+    font-family: 'Architects Daughter', cursive;
+    font-size: var(--md);
+    width: 30%;
+    height: 30px;
+    border-radius: 10px;
+    background: var(--input);
+    color: var(--search);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow:0 5px 50px rgba(32,35,41,.25);
+}
+::placeholder {
+    color: var(--placeholder);
+    text-align: center;
+    }
