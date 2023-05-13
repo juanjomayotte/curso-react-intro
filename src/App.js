@@ -16,17 +16,52 @@ const defaultToDos = [
 ]
 
 function App() {
+  const [toDos, setToDos] = React.useState(defaultToDos);
+  const [searchValue, setSearchValue] = React.useState('');
+  const completedToDos = toDos.filter(toDo => !!toDo.completed).length;
+  const totalToDos = toDos.length;
+  const searchedToDos= toDos.filter((toDo) => {
+    const searchText = searchValue.toLowerCase();
+    const toDoText = toDo.text.toLowerCase();
+    return toDoText.includes(searchText);
+    }
+  );
+  
+  const completeToDo = (text) => {
+    const newToDos = [...toDos];
+    const toDoIndex = newToDos.findIndex(
+      (toDo) => toDo.text === text
+    );
+    newToDos[toDoIndex].completed = true;
+
+    setToDos(newToDos);
+  };
+
+  const deleteToDo = (text) => {
+    const newToDos = [...toDos];
+    const toDoIndex = newToDos.findIndex(
+      (toDo) => toDo.text === text
+    );
+    newToDos.splice(toDoIndex,1);
+
+    setToDos(newToDos);
+  };
   return (
     <>
-       <Logo />
-      <ToDoCounter completed={16} total={25}/>  
-      <ToDoSearch/>
+      <Logo />
+      <ToDoCounter completed={completedToDos} total={totalToDos}/>  
+      <ToDoSearch
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      />
         <ToDoList>
-          {defaultToDos.map(todo =>(
+          {searchedToDos.map(toDo =>(
             <ToDoItem
-            key={todo.text}
-            text={todo.text}
-            completed={todo.completed}
+            key={toDo.text}
+            text={toDo.text}
+            completed={toDo.completed}
+            onComplete = {()=>completeToDo(toDo.text)}
+            onDelete={()=> deleteToDo(toDo.text)}
             />
           ))}
         </ToDoList>

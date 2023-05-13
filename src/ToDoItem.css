@@ -69,6 +69,7 @@ span {
     height: 25px;
     cursor: pointer;
     margin: 1%;
+    border: solid var(--button);
 }
 .delete:hover {
     border: solid var(--background);

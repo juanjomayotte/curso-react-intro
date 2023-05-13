@@ -1,8 +1,19 @@
-import './ToDoSearch.css'
+import React from 'react';
 
-function ToDoSearch(){
-    return(
-        <input placeholder="Busca To-DOs"/>        
+import './ToDoSearch.css';
+
+function ToDoSearch({
+    searchValue,
+    setSearchValue,
+}){
+        return(
+        <input
+        placeholder="Busca To-DOs"
+        value={searchValue}
+        onChange={(event)=>{
+        setSearchValue(event.target.value);
+        }}        
+        />        
         );
 }
 
