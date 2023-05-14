@@ -7,16 +7,43 @@ import { Logo } from './logo';
 
 import React from 'react';
 
-const defaultToDos = [
-  {text: 'Cortar cebolla', completed: false},
-  {text: 'Tomar el curso de NPM', completed: true},
-  {text: 'Tomar el curso de React', completed: false},
-  {text: 'Tomar el curso de CSS', completed: false}
+// const defaultToDos = [
+//   {text: 'Cortar cebolla', completed: false},
+//    {text: 'Tomar el curso de NPM', completed: true},
+//   {text: 'Tomar el curso de React', completed: false},
+//   {text: 'Tomar el curso de CSS', completed: false}
 
-]
+// ]
+
+// localStorage.setItem('toDOs_V1', JSON.stringify(defaultToDos));
+// localStorage.removeItem('toDOs_V1'); 
+
+function useLocalStorage(itemName, initialValue){
+  
+  const localStorageItem= localStorage.getItem(itemName);
+  
+  let parsedItem;
+
+  if (!localStorageItem){
+    localStorage.setItem('itemName',JSON.stringify(initialValue));
+    parsedItem= initialValue;
+  } else {
+    parsedItem= JSON.parse(localStorageItem);
+  }
+
+  const[item, setItem]= React.useState(parsedItem);
+
+  const saveItem = (newItem)=> {
+    localStorage.setItem('itemName', JSON.stringify(newItem))
+    setItem(newItem);
+  };
+  return[item, saveItem];
+}
 
 function App() {
-  const [toDos, setToDos] = React.useState(defaultToDos);
+  
+
+  const [toDos, saveToDos] = useLocalStorage('toDOs_V1', []);
   const [searchValue, setSearchValue] = React.useState('');
   const completedToDos = toDos.filter(toDo => !!toDo.completed).length;
   const totalToDos = toDos.length;
@@ -27,6 +54,8 @@ function App() {
     }
   );
   
+
+
   const completeToDo = (text) => {
     const newToDos = [...toDos];
     const toDoIndex = newToDos.findIndex(
@@ -34,7 +63,7 @@ function App() {
     );
     newToDos[toDoIndex].completed = true;
 
-    setToDos(newToDos);
+    saveToDos(newToDos);
   };
 
   const deleteToDo = (text) => {
@@ -44,7 +73,7 @@ function App() {
     );
     newToDos.splice(toDoIndex,1);
 
-    setToDos(newToDos);
+    saveToDos(newToDos);
   };
   return (
     <>
