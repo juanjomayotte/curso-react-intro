@@ -1,16 +1,6 @@
 import React from 'react';
 import { AppUI } from './AppUI';
 import { useLocalStorage } from './useLocalStorage';
-// const defaultToDos = [
-//   {text: 'Cortar cebolla', completed: false},
-//    {text: 'Tomar el curso de NPM', completed: true},
-//   {text: 'Tomar el curso de React', completed: false},
-//   {text: 'Tomar el curso de CSS', completed: false}
-
-// ]
-
-// localStorage.setItem('toDOs_V1', JSON.stringify(defaultToDos));
-// localStorage.removeItem('toDOs_V1'); 
 
 function App() {
   
