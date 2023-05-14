@@ -37,40 +37,10 @@ ul {
 span {
     display: grid;
 }
-.done {
-    align-items: center;
-    align-content: center;
-    box-sizing: content-box;
-    text-align: center;
-    border: solid var(--button);
-    border-radius: 20%;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    margin: 1%;
-}
 
-.done-active {
-    background: #4caf50;
-}
-
-.done:hover {
-    border: solid var(--background);
-}
-
-.delete {
-    align-items: center;
-    align-content: center;
-    box-sizing: content-box;
-    text-align: center;
-    background: var(--button);
-    border-radius: 20%;
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    margin: 1%;
-    border: solid var(--button);
-}
-.delete:hover {
-    border: solid var(--background);
-}
+.done-container-check:hover .Icon-svg {
+    fill: green;
+  }
+  .delete-container-delete:hover .Icon-svg {
+    fill: red;
+  }

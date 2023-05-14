@@ -1,0 +1,46 @@
+.Icon-container {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  background: var(--background);
+}
+
+.Icon-container-check--active {
+  color: var(--section);
+}
+
+.Icon-container-delete {
+align-items: right;
+}
+
+.Icon-svg {
+  width: 24px;
+  height: 24px;
+}
+
+.Icon-container-check:hover .Icon-svg {
+  fill: var(--section);
+}
+.Icon-container-delete:hover .Icon-svg {
+  fill: var(--search)
+}
+
+@media (max-width: 655px) {
+    .Icon-container {
+        height: 24px;
+        width: 24px;
+      }
+      
+    
+    .Icon-svg {
+        width: 12px;
+        height: 12px;
+      }
+      
+}
