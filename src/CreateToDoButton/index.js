@@ -1,13 +1,18 @@
 import './CreateToDoButton.css'
 
-function CreateToDoButton() {
+function CreateToDoButton({setOpenModal}) {
     return(
-        <button 
-        className='createToDoButton'
-        onClick={
-          ()=> console.log('click mDF')
-        }
-        >+</button>
+        <div className='createToDoButton-container'>
+          <button 
+            className='createToDoButton'
+            onClick={
+              ()=> {
+                setOpenModal(state=>!state);
+              }
+            }
+            >+</button>
+        </div>
+        
         );
   }
 export {CreateToDoButton};  

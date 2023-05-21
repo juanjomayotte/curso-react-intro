@@ -1,0 +1,125 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    font-size: var(--lg);
+    text-align: center;
+    color: var(--text);
+}
+
+textarea {
+    font-size: var(--md);
+    padding: 2%;
+    font-family: 'Architects Daughter', cursive;
+    background-color: var(--background);
+    width: 70%;
+    height: 120px;
+    color: var(--search);
+    border-radius: 15px;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button {
+    font-family: 'Architects Daughter', cursive;
+    appearance: none;
+    writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: var(--text);
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: var(--button);
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+}
+.ToDoForm-button--container {
+    flex-direction: row;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
+    z-index: 1
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+    }
+  }
+.ToDoForm-button--close {
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 2%;
+    box-sizing: border-box;
+    width: 140px;
+    height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--search);
+}
+.ToDoForm-button--add {
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 2%;
+    box-sizing: border-box;
+    width: 140px;
+    height: 45px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 1px solid var(--search);
+}
+
+.ToDoForm-button--close:hover {
+    color: var(--input);
+    border: 1px solid var(--background);
+    animation: hithere 2s ease infinite;
+}
+@keyframes hithere {
+    30% { transform: scale(1.2); }
+    40%, 60% { transform: rotate(-20deg) scale(1.2); }
+    50% { transform: rotate(20deg) scale(1.2); }
+    70% { transform: rotate(0deg) scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+.ToDoForm-button--add:hover {
+    color: var(--input);
+    border: 1px solid var(--background);
+    animation: hithere 2.5s ease infinite;
+}
+
+@keyframes hithere {
+    30% { transform: scale(1.2); }
+    40%, 60% { transform: rotate(-20deg) scale(1.2); }
+    50% { transform: rotate(20deg) scale(1.2); }
+    70% { transform: rotate(0deg) scale(1.2); }
+    100% { transform: scale(1); }
+  }
+
+.ToDoForm-button--add:active {
+    box-shadow: 2px 2px 5px var(--background);
+}
+.ToDoForm-button--close:active {
+    box-shadow: 2px 2px 5px var(--background);
+}

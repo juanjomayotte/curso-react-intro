@@ -1,0 +1,17 @@
+.EmptyToDos {
+    text-align: center;
+    animation-duration: 2s;
+    animation-name: slidein;
+    font-size: var(--lg);
+}
+
+@keyframes slidein {
+    from {
+    margin-left: 100%;
+    width: 100%;
+    }
+    to {
+    margin-left: 0%;
+    width: 100%;
+    }
+}

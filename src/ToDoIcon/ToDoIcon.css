@@ -25,10 +25,10 @@ align-items: right;
 }
 
 .Icon-container-check:hover .Icon-svg {
-  fill: var(--section);
+  fill: var(--button);
 }
 .Icon-container-delete:hover .Icon-svg {
-  fill: var(--search)
+  fill: var(--button);
 }
 
 @media (max-width: 655px) {

@@ -1,0 +1,21 @@
+.ToDoLoading {
+    box-sizing: border-box  ;
+    color: var(--search);
+    width: 100%;
+    height: 50%;
+    background-color: var(--background);
+    animation: loadingAnimation 1s infinite alternate;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    padding: 1%;
+  }
+  
+  @keyframes loadingAnimation {
+    0% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

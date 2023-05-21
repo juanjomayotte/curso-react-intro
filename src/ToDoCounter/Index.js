@@ -1,20 +1,23 @@
+import React from 'react';
 import './ToDoCounter.css';
+import { ToDoContext } from '../ToDoContext';
 
-function ToDoCounter({ total, completed }) {
+function ToDoCounter() {
+    const {
+      completedToDos,
+      totalToDos
+    } = React.useContext(ToDoContext);  
     return (
       <>
-          <h1>
-            Organiza tus actividades. Dale al botón "+" para agregar un to-DO
-          </h1>
-        {total === completed && (
-          <h1>
-            Felicidades! Completaste todos tus to-DOS 👏👏👏
+        {(totalToDos === completedToDos) && (totalToDos >=1) && (
+          <h1 className='felicidades'>
+            Felicidades! Completaste todos tus to-DOS!<br />👏👏👏
           </h1>
         )}
-        {total !== completed && (
+        {totalToDos !== completedToDos && (
           <h1>
           Has completado&nbsp;
-          <span>{completed}</span>&nbsp;de&nbsp;<span>{total}</span>&nbsp;to-DOs.
+          <span>{completedToDos}</span>&nbsp;de&nbsp;<span>{totalToDos}</span>&nbsp;to-DOs.
           </h1>
           
         )}
