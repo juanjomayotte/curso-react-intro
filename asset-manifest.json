@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/juanjomayotte/curso-react-intro/static/css/main.8b58d82c.css",
-    "main.js": "/juanjomayotte/curso-react-intro/static/js/main.dec73709.js",
-    "index.html": "/juanjomayotte/curso-react-intro/index.html",
-    "static/media/DeleteIcon.svg": "/juanjomayotte/curso-react-intro/static/media/DeleteIcon.84e4a932c97ebd0c6c78dd05068de6fb.svg",
-    "static/media/CompleteIcon.svg": "/juanjomayotte/curso-react-intro/static/media/CompleteIcon.869a5e77f19ab8e1fd324a52c184d1b0.svg",
-    "main.8b58d82c.css.map": "/juanjomayotte/curso-react-intro/static/css/main.8b58d82c.css.map",
-    "main.dec73709.js.map": "/juanjomayotte/curso-react-intro/static/js/main.dec73709.js.map"
+    "main.css": "static/css/main.8b58d82c.css",
+    "main.js": "static/js/main.dec73709.js",
+    "index.html": "index.html",
+    "static/media/DeleteIcon.svg": "static/media/DeleteIcon.84e4a932c97ebd0c6c78dd05068de6fb.svg",
+    "static/media/CompleteIcon.svg": "static/media/CompleteIcon.869a5e77f19ab8e1fd324a52c184d1b0.svg",
+    "main.8b58d82c.css.map": "static/css/main.8b58d82c.css.map",
+    "main.dec73709.js.map": "static/js/main.dec73709.js.map"
   },
   "entrypoints": [
     "static/css/main.8b58d82c.css",
