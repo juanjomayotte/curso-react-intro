@@ -2,7 +2,7 @@
   "files": {
     "main.css": "/juanjomayotte/curso-react-intro/static/css/main.8b58d82c.css",
     "main.js": "/juanjomayotte/curso-react-intro/static/js/main.72dc9229.js",
-    "static/media/logo.jpg": "/juanjomayotte/curso-react-intro/static/media/logo.755f971534c90cc8d1cc.jpg",
+    "static/media/logo.jpg": "https://images.pexels.com/photos/16927348/pexels-photo-16927348.jpeg",
     "index.html": "/juanjomayotte/curso-react-intro/index.html",
     "static/media/DeleteIcon.svg": "/juanjomayotte/curso-react-intro/static/media/DeleteIcon.84e4a932c97ebd0c6c78dd05068de6fb.svg",
     "static/media/CompleteIcon.svg": "/juanjomayotte/curso-react-intro/static/media/CompleteIcon.869a5e77f19ab8e1fd324a52c184d1b0.svg",
